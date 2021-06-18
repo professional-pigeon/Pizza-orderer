@@ -40,16 +40,6 @@ function priceCalculator(topping1, topping2, topping3, size) {
   } else {}
 }
 
-// pizza1.toppings[0].topping1
-// pizza1.toppings[0].topping2
-// pizza1.toppings[0].topping3
-// pizza1.toppings[0].size
-// pizza1.toppings.push(yourPizza) (this works)
-
-// // pizza1.details["Red Onion"].topping1 or topping2 etc...
-// // or pizza1.details[key].topping1
-
-
 let price = 0;
 
 $(document).ready(function() {

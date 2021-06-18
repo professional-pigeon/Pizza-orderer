@@ -2,3 +2,10 @@
   display: block;
   border: solid 1px;
 }
+.body {
+  background-color: beige;
+}
+
+.img {
+  justify-content: right;
+}
