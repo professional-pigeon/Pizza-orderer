@@ -5,33 +5,73 @@
   <link href="css/styles.css" rel="stylesheet" type="text/css">
   <script src="js/jquery-3.6.0.js"></script>
   <script src="js/scripts.js"></script>
-  <title>Movie</title>
+  <title>Pascal's Pizza</title>
 </head>
 <body>
   <div class="container">
     <div class="jumbotron">
-      <h1>Pascal's Pizza Parlor</h1>
+      <h1>Pascal's Vegan Pizza Parlor</h1>
       <p>Choose up to three toppings and a size and checkout. Currently takeout only (thank you)!</p>
     </div>
-    <form id="pizzaForm">
-    <div class="row">
-      <div class="col">
-        <input type="radio" id="male" name="gender" value="male">
-        <label for="male">Male</label><br>
-        <input type="radio" id="female" name="gender" value="female">
-        <label for="female">Female</label><br>
-        <input type="radio" id="other" name="gender" value="other">
-        <label for="other">Other</label>
+    <form id="pizzaGeneratorUI">
+      <div class="row">
+        <div class="col" id="radio1">
+          <p>Please choose a topping</p>
+            <input type="radio" id="none" name="pizzaTopping" value="none">
+            <label for="none">none</label><br>
+            <input type="radio" id="greenPepper" name="pizzaTopping" value="Green Pepper">
+            <label for="greenPepper">Green Pepper</label><br>
+            <input type="radio" id="blackOlive" name="pizzaTopping" value="Black Olive">
+            <label for="blackOlive">Black Olive</label><br>
+            <input type="radio" id="bananaPepper" name="pizzaTopping" value="Banana Pepper">
+            <label for="bananaPepper">Banana Pepper</label><br>
+            <input type="radio" id="redOnion" name="pizzaTopping" value="Red Onion">
+            <label for="redOnion">Red Onion</label><br>
+            <input type="radio" id="mushroom" name="pizzaTopping" value="Mushroom">
+            <label for="mushroom">Mushroom</label>
+        </div>
+        <div class="col">
+          <p>Please choose a second topping</p>
+            <input type="radio" id="none" name="pizzaTopping2" value="none">
+            <label for="none">none</label><br>
+            <input type="radio" id="greenPepper" name="pizzaTopping2" value="Green Pepper">
+            <label for="greenPepper">Green Pepper</label><br>
+            <input type="radio" id="blackOlive" name="pizzaTopping2" value="Black Olive">
+            <label for="blackOlive">Black Olive</label><br>
+            <input type="radio" id="bananaPepper" name="pizzaTopping2" value="Banana Pepper">
+            <label for="bananaPepper">Banana Pepper</label><br>
+            <input type="radio" id="redOnion" name="pizzaTopping2" value="Red Onion">
+            <label for="redOnion">Red Onion</label><br>
+            <input type="radio" id="mushroom" name="pizzaTopping2" value="Mushroom">
+            <label for="mushroom">Mushroom</label>
+        </div>
+        <div class="col">
+          <p>Please choose a second topping</p>
+            <input type="radio" id="none" name="pizzaTopping3" value="none">
+            <label for="none">none</label><br>
+            <input type="radio" id="greenPepper" name="pizzaTopping3" value="Green Pepper">
+            <label for="greenPepper">Green Pepper</label><br>
+            <input type="radio" id="blackOlive" name="pizzaTopping3" value="Black Olive">
+            <label for="blackOlive">Black Olive</label><br>
+            <input type="radio" id="bananaPepper" name="pizzaTopping3" value="Banana Pepper">
+            <label for="bananaPepper">Banana Pepper</label><br>
+            <input type="radio" id="redOnion" name="pizzaTopping3" value="Red Onion">
+            <label for="redOnion">Red Onion</label><br>
+            <input type="radio" id="mushroom" name="pizzaTopping3" value="Mushroom">
+            <label for="mushroom">Mushroom</label>
+        </div>
+        <div class="col">
+          <p>Choose a size</p>
+            <input type="radio" id="small" name="pizzaSize" value="Small">
+            <label for="small">Small</label><br>
+            <input type="radio" id="medium" name="pizzaSize" value="Medium">
+            <label for="medium">Medium</label><br>
+            <input type="radio" id="large" name="pizzaSize" value="Large">
+            <label for="large">Large</label><br>
+            <button class="btn btn-primary" type="submit">Add Pizza</button>
         </div>
       </div>
-      <div class="col">
-        <p>Choose a topping</p>
-      </div>
-      <div class="col">
-        <p>Choose a topping</p>
-      </div>
-    </div>
-  </form>
+    </form>  
   </div>
   
 </body>

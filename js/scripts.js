@@ -40,10 +40,18 @@ function priceCalculator(PizzaParts) {
 // // or pizza1.details[key].topping1
 
 $(document).ready(function() {
-  event.preventDefault
-  let topping1 = val
-  let topping2 = val
-  let topping3 = val
-  let size = val
-  let yourPizza = new PizzaParts(topping1, topping2, topping3, size)
-})
+  $("form#pizzaGeneratorUI").submit(function(event) {
+    event.preventDefault();
+    let topping1 = $("input:radio[name=pizzaTopping]:checked").val();
+    let topping2 = $("input:radio[name=pizzaTopping2]:checked").val();
+    let topping3 = $("input:radio[name=pizzaTopping3]:checked").val();
+    let size = $("input:radio[name=pizzaSize]:checked").val();
+    let thisPizza = new PizzaParts(topping1, topping2, topping3, size);
+    console.log(thisPizza);
+    let pizza1 = new Pizza();
+    pizza1.addPizzaParts(thisPizza)
+    console.log(pizza1)
+  });
+});
+
+// const gender = $("input:radio[name=gender]:checked").val();
