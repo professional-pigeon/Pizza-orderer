@@ -51,6 +51,33 @@ $(document).ready(function() {
     let pizza1 = new Pizza();
     pizza1.addPizzaParts(thisPizza)
     console.log(pizza1)
+    let price = 0
+    if (topping1 != "none") {
+      price = price + 1;
+    } else {
+
+    }
+    if (topping2 != "none") {
+      price = price + 1
+    } else {
+
+    }
+    if (topping3 != "none") {
+      price = price + 1
+    } else {
+
+    }
+
+    if (size === "Small") {
+      price = price + 8;
+    } else if (size === "Medium") {
+      price = price + 10;
+    } else {
+      price = price + 12;
+    }
+
+    console.log(price)
+
   });
 });
 
