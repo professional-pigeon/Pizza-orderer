@@ -52,7 +52,7 @@ result: pizza1.details = {};
 test: "should create a pizza object with a spot for price in addition to empty spot for an object."
 result: pizza1. {
   details = {};
-  price = "":
+  price = "";
 }
 
 Describe: function PizzaParts(topping1, topping2, topping3, size)
@@ -60,12 +60,11 @@ Describe: function PizzaParts(topping1, topping2, topping3, size)
 test: "should create an object containing the details of a pizza in key object pairs.
 code: let yourPizza = new PizzaParts("Red Onion", "Peppers", "Black Olives", "Large")
 result: yourPizza {
-  topping1 = "Red Onion"
-  topping2 = "Peppers"
-  topping3 = "Black Olives"
-  size = "Large"
+  topping1: "Red Onion"
+  topping2: "Peppers"
+  topping3: "Black Olives"
+  size: "Large"
 }
-
 
 Describe: Pizza.prototype.addPizzaParts()
 
@@ -111,12 +110,13 @@ code: let topping1 = "none"
       priceCalculator(topping1, topping2, topping3)
 result: price = 0
 
-test: "should return a price of 8 if size is equal to "Small""
-code: let size = "Small"
-t
-
-
-
+test: "Should return a price of 8 if pizza is small, 10 if medium, 12 if large"
+code: let topping1 = "none"
+      let topping2 = "none"
+      let topping3 = "none"
+      let size = "Small"
+      priceCalculator(topping1, topping2, topping3, size)
+result: price = 8
 
 ## License
 
