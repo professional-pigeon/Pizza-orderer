@@ -47,7 +47,7 @@ $(document).ready(function() {
     let topping3 = $("input:radio[name=pizzaTopping3]:checked").val();
     let size = $("input:radio[name=pizzaSize]:checked").val();
     let thisPizza = new PizzaParts(topping1, topping2, topping3, size);
-    console.log(thisPizza);
+    console.log(thisPizza[1]);
     let pizza1 = new Pizza();
     pizza1.addPizzaParts(thisPizza)
     console.log(pizza1)

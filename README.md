@@ -38,4 +38,6 @@ code: Pizza.addPizzaParts(PizzaParts)
 result: Pizza.details[PizzaParts] = {topping1: value, topping2: value, topping3: value, size: value}
 
 
-Describe:
+Describe: priceCalculator(PizzaParts)
+
+test: "Should 
