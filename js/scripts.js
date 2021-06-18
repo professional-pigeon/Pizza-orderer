@@ -66,8 +66,11 @@ $(document).ready(function() {
     priceCalculator(topping1, topping2, topping3, size);
     pizza1.price = price;
 
-    $("#customerSize").prepend(pizza1.size)
-    $("")
+    $("#customerSize").html("One " + thisPizza.size + " Pizza with ")
+    $("#customerTopping").prepend(thisPizza.topping1 + ". ")
+    $("#customerTopping").prepend(thisPizza.topping2 + ", ")
+    $("#customerTopping").prepend(thisPizza.topping3 + ", ")
+    $("#orderTotal").html("Your total is $" + pizza1.price + "." + "<br>" + "Please pick up at the 2020 N Halsey location.")
 
   });
 });
