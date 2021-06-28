@@ -1,46 +1,35 @@
 // business logic
 
-// Pizza logic
-
-function Pizza() {
-  this.details = {};
-  this.price = "";
-}
-
-function PizzaParts(topping1, topping2, topping3, size) {
+function Pizza(topping1, topping2, topping3, size) {
   this.topping1 = topping1;
   this.topping2 = topping2;
   this.topping3 = topping3;
   this.size = size;
+  this.price = 0;
 }
 
-Pizza.prototype.addPizzaParts = function(PizzaParts) {
-  this.details[PizzaParts.size] = PizzaParts;
+Pizza.prototype.priceCalculator = function() {
+  if (this.topping1 != "none") {
+    this.price = this.price + 1;
+  } else {}
+
+  if (this.topping2 != "none") {
+    this.price = this.price + 1;
+  } else {}
+
+  if (this.topping3 != "none") {
+    this.price = this.price + 1;
+  } else {}
+
+  if (this.size === "Small") {
+    this.price = this.price + 8;
+  } else if (this.size === "Medium") {
+    this.price = this.price + 10;
+  } else if (this.size === "Large") {
+    this.price = this.price + 12;
+  } else {}
+
 }
-
-function priceCalculator(topping1, topping2, topping3, size) {
-  if (topping1 != "none") {
-    price = price + 1;
-  } else {}
-
-  if (topping2 != "none") {
-    price = price + 1;
-  } else {}
-
-  if (topping3 != "none") {
-    price = price + 1;
-  } else {}
-
-  if (size === "Small") {
-    price = price + 8;
-  } else if (size === "Medium") {
-    price = price + 10;
-  } else if (size === "Large") {
-    price = price + 12;
-  } else {}
-}
-
-let price = 0;
 
 $(document).ready(function() {
   $("form#pizzaGeneratorUI").submit(function(event) {
@@ -49,17 +38,10 @@ $(document).ready(function() {
     let topping2 = $("input:radio[name=pizzaTopping2]:checked").val();
     let topping3 = $("input:radio[name=pizzaTopping3]:checked").val();
     let size = $("input:radio[name=pizzaSize]:checked").val();
-    let thisPizza = new PizzaParts(topping1, topping2, topping3, size);
-    console.log(thisPizza.size);
-    let pizza1 = new Pizza();
-    pizza1.addPizzaParts(thisPizza);
-    priceCalculator(topping1, topping2, topping3, size);
-    pizza1.price = price;
-
-    $("#customerSize").html("One " + thisPizza.size + " Pizza with ")
-    $("#customerTopping").prepend(thisPizza.topping1 + ". ")
-    $("#customerTopping").prepend(thisPizza.topping2 + ", ")
-    $("#customerTopping").prepend(thisPizza.topping3 + ", ")
+    let pizza1 = new Pizza(topping1, topping2, topping3, size);
+    pizza1.priceCalculator();
+    $("#customerSize").html("One " + pizza1.size + " Pizza with ")
+    $("#customerTopping").html(pizza1.topping1 + ", " + pizza1.topping2 + ", " + pizza1.topping3 + ". ")
     $("#orderTotal").html("Your total is $" + pizza1.price + "." + "<br>" + "Please pick up at the 2020 N Halsey location.")
 
   });
